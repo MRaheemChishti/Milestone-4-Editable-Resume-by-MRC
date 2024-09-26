@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rsume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+
+    <h1>Dynamic Resume Builder By <b>MRC</b> <br>  Milstone 4:  Editable Resume </h1>
+
+    <form id="ResumeForm">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required >
+
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" name="phone" required >
+
+            <label for="address">Address: </label>
+            <input type="tel" id="address" name="address" required >
+
+            <label for="profilepicture">Profile Picture: </label>
+            <input type="file" id="profilepicture" name="profilepicture" accept="image/*" required>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education: </label>
+            <textarea name="education" id="education" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+            <label for="work_experience">Work Experience: </label>
+            <textarea name="work_experience" id="work_experience" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Certification</legend>
+          <label for="certification">Certification: </label>
+          <textarea name="certification" id="certification" rows="4" required></textarea>
+      </fieldset>
+ 
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills: </label>
+            <textarea name="skills" id="skills" rows="4" required></textarea>
+        </fieldset>
+
+        <button type="submit"> Generate Resume </button>
+    </form>
+</div>
+    
+    <div id="resumeOutput" class="resume-output hidden">
+        <div id="resumeContent" class="resume-content">
+            <img id="resumeProfilepicture" class="resume-Profilepicture" src="" alt="Photo">
+
+            <h1 id="resumename"></h1>
+            <p id="resumeemail"></p>
+            <p id="resumephone"></p>
+            <p id="resumeaddress"></p>
+
+            <h2>Education</h2>
+            <ul> <li id="resumeeducation"></li></ul>
+
+            <h2>Work Experience</h2>
+            <ul> <li id="resumeWorkexperience"></li></ul>
+
+            <h2>Certification</h2>
+            <ul> <li id="resumecertification"></li></ul>
+
+            <h2>Skills</h2>
+            <ul> <li id="resumeskills"></li></ul>
+        </div>
+
+        <div id="Buttons">
+            <button id="editbutton">Edit Your Resume</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
